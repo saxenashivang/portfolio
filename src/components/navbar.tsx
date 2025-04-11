@@ -46,7 +46,7 @@ export function Navbar() {
               <NavLink href="/#experience">Experience</NavLink>
               <NavLink href="/#projects">Projects</NavLink>
               <NavLink href="/#skills">Skills</NavLink>
-              <NavLink href="/Shivang_Saxena_color.pdf" target="_blank">
+              <NavLink href="/resume.pdf" target="_blank">
                 Resume
               </NavLink>
               <NavLink href="#contact">Contact</NavLink>

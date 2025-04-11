@@ -8,7 +8,7 @@ import Link from "next/link";
 import { animate, stagger } from "animejs";
 // import MatrixRain from "./ui/matrix-code";
 import { Alert, AlertTitle, AlertDescription } from "./ui/alert";
-import { Typewriter } from "./ui/typewriter";
+import Image from "next/image";
 
 export function HeroSection() {
   const animationRef = useRef<null | Record<string, never>>(null);
@@ -64,106 +64,118 @@ export function HeroSection() {
           speed={1.0}
         /> */}
       </div>
-      <div className="hero-content flex flex-col items-center space-y-6  max-w-4xl mx-auto px-4 relative z-10">
-        <div className="space-y-4">
-          {/* Added 'hero-title' class for animation targeting */}
-          <h1 className="hero-title text-4xl font-extrabold tracking-tight text-center sm:text-5xl md:text-6xl lg:text-7xl/none">
-            Hi, I&apos;m{" "}
-            <span className="relative inline-block after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:bg-gradient-to-r after:from-indigo-500 after:to-pink-500">
-              Shivang Saxena
-            </span>
-          </h1>
-        </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="flex flex-col space-y-8">
+            <div className="space-y-4">
+              <h1 className="hero-title text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none">
+                Shivang Saxena
+              </h1>
+              <div className="flex items-center space-x-2">
+                <div className="h-2 w-2 rounded-full bg-blue-500"></div>
+                <p className="text-muted-foreground text-lg">
+                  Senior Backend Engineer
+                </p>
+                <div className="h-2 w-2 rounded-full bg-blue-500"></div>
+                <p className="text-muted-foreground text-lg">
+                  Full Stack Developer
+                </p>
+              </div>
+              <p className="text-muted-foreground md:text-xl lg:text-lg xl:text-xl">
+                A technology-agnostic engineer with extensive experience in
+                end-to-end software development, agile methodologies, and
+                technical leadership.
+              </p>
+            </div>
 
-        <div className="w-full h-full md:text-3xl lg:text-4xl sm:text-1xl text-2xl flex flex-row items-start justify-start bg-background font-normal overflow-hidden">
-          <p className="whitespace-pre-wrap text-center text-lg sm:text-xl font-medium leading-relaxed">
-            <span>{"I engineer 🧪 "}</span>
-            <Typewriter
-              text={[
-                "resilient backend systems",
-                "snappy full stack apps",
-                "AI agents with attitude",
-                "self-healing cloud infra",
-                "a sprinkle of chaos & charm",
-              ]}
-              speed={65}
-              className="text-green-500"
-              waitTime={1800}
-              deleteSpeed={35}
-              cursorChar={"▍"}
-            />
-          </p>
-        </div>
-        <Alert>
-          <Terminal className="h-4 w-4" />
-          <AlertTitle className="text-muted-foreground">
-            Console Says:
-          </AlertTitle>
-          <AlertDescription className="whitespace-pre font-mono text-sm mt-2">
-            {`$ npm start
-🧠 Booting genius mode...
-⚠️  AI modules slightly sarcastic...
+            <Alert>
+              <Terminal className="h-4 w-4" />
+              <AlertTitle className="text-muted-foreground">
+                $ go run main.go
+              </AlertTitle>
+              <AlertDescription className="whitespace-pre font-mono text-sm mt-2">
+                {`🧠 Booting genius mode...
+🔍 Analyzing common sense...
 ✅ Running flawlessly until proven otherwise.`}
-          </AlertDescription>
-        </Alert>
-        {/* Added 'hero-buttons' and 'button-anim' classes for animation */}
-        <div className="hero-buttons space-x-4">
-          <Button size="lg" className="button-anim" asChild>
-            <Link href="#projects">
-              View Projects <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-          <Button size="lg" variant="outline" className="button-anim" asChild>
-            <Link href="#contact">
-              Get In Touch <Mail className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-        {/* Optional: Social Links */}
-        <div className="hero-buttons flex pt-4 space-x-4">
-          <Link
-            href="https://github.com/saxenashivang"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button-anim text-muted-foreground hover:text-foreground"
-          >
-            <Github className="h-6 w-6" />
-            <span className="sr-only">GitHub</span>
-          </Link>
-          <Link
-            href="https://linkedin.com/in/shivangsaxena"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button-anim text-muted-foreground hover:text-foreground"
-          >
-            {/* Note: Resume uses 'Im shivangsaxena', adjust URL if that's not the profile ID [cite: 3] */}
-            <Linkedin className="h-6 w-6" />
-            <span className="sr-only">LinkedIn</span>
-          </Link>
-          <Link
-            href="https://shivangsaxena.in"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button-anim text-muted-foreground hover:text-foreground"
-          >
-            {/* Placeholder for website link, replace icon if needed */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-              />
-            </svg>
-            <span className="sr-only">Website</span>
-          </Link>
-          {/* Add other relevant links */}
+              </AlertDescription>
+            </Alert>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="button-anim" asChild>
+                <Link href="#projects">
+                  View Projects <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="button-anim"
+                asChild
+              >
+                <Link href="#contact">
+                  Get In Touch <Mail className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
+            <div className="flex items-center space-x-4 pt-4">
+              <Link
+                href="https://github.com/saxenashivang"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Github className="h-6 w-6" />
+                <span className="sr-only">GitHub</span>
+              </Link>
+              <Link
+                href="https://linkedin.com/in/shivangsaxena"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Linkedin className="h-6 w-6" />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
+              {/* <Link
+                href="https://shivangsaxena.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                  />
+                </svg>
+                <span className="sr-only">Website</span>
+              </Link> */}
+            </div>
+          </div>
+
+          {/* Right Image */}
+          <div className="relative hidden lg:block">
+            <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-500/5 backdrop-blur-sm"></div>
+              {/* Replace this div with your image */}
+              <div className="absolute inset-0 bg-muted">
+                {/* Add your image here */}
+                <Image src="/linkedin.png" alt="Shivang Saxena" fill />
+              </div>
+            </div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-blue-500/20 backdrop-blur-sm"></div>
+            <div className="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-blue-500/20 backdrop-blur-sm"></div>
+          </div>
         </div>
       </div>
     </section>

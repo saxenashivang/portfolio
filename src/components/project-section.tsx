@@ -26,46 +26,25 @@ interface Project {
 // Data extracted from the resume PDF
 const projects: Project[] = [
   {
-    title: "SIMPLYNFT",
+    title: "mool.ai",
     description:
-      "Developed a blockchain-based online store with complex data processing and UI features.",
-    technologies: [
-      "Next.js",
-      "NestJS",
-      "Firebase",
-      "Rarible SDK",
-      "Google Task",
-    ],
-    link: "https://simplynft.com",
-  },
-  {
-    title: "SPIKING",
-    description:
-      "Created real-time blockchain transaction analytics application.",
+      "Mool.ai is an AI-powered platform designed to make research faster and smarter for strategy & investment professionals.",
     details: [
-      "Defined and designed architecture to handle and process terabytes of data.",
-      "Implemented complex graphs & charts rendering data like OHLC & time series.",
+      "Leading the development of AI-powered financial research platform",
+      "Created several agent tools to automate the research process",
     ],
-    technologies: [
-      "Next.js",
-      "NestJS",
-      "Clickhouse",
-      "Redis",
-      "PostgreSQL",
-      "Kafka",
-      "Apache Airflow",
-    ],
-    link: "https://spiking.xyz",
+    technologies: ["Node js", "React", "RAG"],
+    link: "https://mool.ai",
   },
   {
-    title: "ALFRED",
+    title: "alfred",
     description:
       "Developed an open-source microservice boilerplate to simplify and automate web app deployment on any cloud server.",
     technologies: ["Go", "Node.js", "Next.js", "Terraform"],
     repo: "https://github.com/deqode-labs/alfred",
   },
   {
-    title: "MATTERSUITE",
+    title: "mattersuite",
     description:
       "Managed comprehensive matter details including court hearings, case descriptions, oppositions, and legal discovery.",
     details: [
@@ -80,7 +59,7 @@ const projects: Project[] = [
       "microservices",
       "Cadence",
     ],
-    link: "https://matter-suite.com",
+    link: "https://www.mattersuite.com/",
   },
 ];
 

@@ -63,7 +63,7 @@ export function ContactSection() {
             {/* Optional: Link to Resume PDF hosted in /public */}
             <Button size="lg" variant="outline" asChild>
               <Link
-                href="/Shivang_Saxena_color.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
